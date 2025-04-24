@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<body style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+ background-size: cover; background-position: center; background-repeat: no-repeat; color: black; text-shadow: 1px 1px 3px white;"">
+<header>
+  <h1>La mia lista personale</h1>
+  <p>Benvenuto! Inserisci qui le tue attività.</p>
+</header>
+
+<section>
+  <h2>Nuova attività</h2>
+  <form>
+    <label for="task">Cosa devi fare?</label><br>
+    <input type="text" id="task" name="task" placeholder="Es: Comprare il pane"><br><br>
+    <input type="submit" value="Aggiungi">
+  </form>
+</section>
+
+<section>
+    <h2>Altre info</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+          
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data"><br><br>
+          
+            <label for="ora">Ora:</label>
+            <input type="time" id="ora" name="ora"><br><br>
+          
+            <label for="tipo">Tipo di attività:</label>
+            <select id="tipo" name="tipo">
+              <option value="personale">Personale</option>
+              <option value="lavoro">Lavoro</option>
+              <option value="studio">Studio</option>
+            </select><br><br>
+          
+            <input type="submit" value="Invia">
+          </form>
+  </section>
+
+  <Section>
+    <form>
+        <fieldset>
+          <legend>Informazioni Personali</legend>
+      
+          <label for="nomeinfo">Nome:</label>
+          <input type="text" id="nomeinfo" name="nome"><br><br>
+      
+          <label for="cognome">Cognome:</label>
+          <input type="text" id="cognome" name="cognome"><br><br>
+        </fieldset>
+      
+        <fieldset>
+          <legend>Preferenze</legend>
+      
+          <label for="newsletter">Iscriviti alla newsletter:</label>
+          <input type="checkbox" id="newsletter" name="newsletter"><br><br>
+      
+          <label for="tema">Tema preferito:</label>
+          <select id="tema" name="tema">
+            <option value="chiaro">Chiaro</option>
+            <option value="scuro">Scuro</option>
+          </select><br><br>
+        </fieldset>
+      
+        <input type="submit" value="Invia">
+      </form>
+      
+ </Section>
+
+
+<section>
+  <h2>Attività salvate (statiche)</h2>
+  <ul>
+    <li>Comprare il latte</li>
+    <li>Fare esercizio</li>
+    <li>Studiare HTML</li>
+  </ul>
+</section>
+
+<footer>
+  <p>
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" style="color: black; text-decoration: none;">
+      <img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="Licenza Creative Commons Attribution 4.0" style="vertical-align: middle;">
+      Questo contenuto è distribuito con licenza CC BY 4.0
+    </a>
+  </p>
+</footer>
