@@ -5,4 +5,9 @@
     font-size: 18px;
     padding: 8px;
   }
+  /* Stile per separare elementi */
+  #taskInput, #addTaskButton {
+    display: block;
+    margin: 10px auto;
+  }
   
