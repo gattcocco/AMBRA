@@ -1,0 +1,8 @@
+/* Stile per il campo input */
+#taskInput {
+    width: 70%;
+    height: 40px;
+    font-size: 18px;
+    padding: 8px;
+  }
+  
