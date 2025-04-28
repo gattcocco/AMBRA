@@ -1,83 +1,38 @@
 <!DOCTYPE html>
-<html>
-<body style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
- background-size: cover; background-position: center; background-repeat: no-repeat; color: black; text-shadow: 1px 1px 3px white;"">
-<header>
-  <h1>La mia lista personale</h1>
-  <p>Benvenuto! Inserisci qui le tue attività.</p>
-</header>
+ <!-- Meta informazioni e impostazioni di visualizzazione-->
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Esercizio di Coding</title>
+</head>
 
-<section>
-  <h2>Nuova attività</h2>
-  <form>
-    <label for="task">Cosa devi fare?</label><br>
-    <input type="text" id="task" name="task" placeholder="Es: Comprare il pane"><br><br>
-    <input type="submit" value="Aggiungi">
-  </form>
-</section>
+<body>
+ <!-- Intestazione della pagina -->
+  <header id="myHeader">
+    <h1>Cosa (non) faccio oggi?</h1>
+    <input type="text" id="taskInput" placeholder="Scrivi un'attività che non realizzerai...">
+    <button id="addTaskButton">Aggiungi</button>
+  </header>
 
-<section>
-    <h2>Altre info</h2>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required><br><br>
-          
-            <label for="data">Data:</label>
-            <input type="date" id="data" name="data"><br><br>
-          
-            <label for="ora">Ora:</label>
-            <input type="time" id="ora" name="ora"><br><br>
-          
-            <label for="tipo">Tipo di attività:</label>
-            <select id="tipo" name="tipo">
-              <option value="personale">Personale</option>
-              <option value="lavoro">Lavoro</option>
-              <option value="studio">Studio</option>
-            </select><br><br>
-          
-            <input type="submit" value="Invia">
-          </form>
-  </section>
+  <!-- Lista delle attività -->
+  <main>
+    <ul id="taskList">
+      <!-- Qui compariranno i task -->
+    </ul>
+  </main>
 
-  <Section>
-    <form>
-        <fieldset>
-          <legend>Informazioni Personali</legend>
-      
-          <label for="nomeinfo">Nome:</label>
-          <input type="text" id="nomeinfo" name="nome"><br><br>
-      
-          <label for="cognome">Cognome:</label>
-          <input type="text" id="cognome" name="cognome"><br><br>
-        </fieldset>
-      
-        <fieldset>
-          <legend>Preferenze</legend>
-      
-          <label for="newsletter">Iscriviti alla newsletter:</label>
-          <input type="checkbox" id="newsletter" name="newsletter"><br><br>
-      
-          <label for="tema">Tema preferito:</label>
-          <select id="tema" name="tema">
-            <option value="chiaro">Chiaro</option>
-            <option value="scuro">Scuro</option>
-          </select><br><br>
-        </fieldset>
-      
-        <input type="submit" value="Invia">
-      </form>
-      
- </Section>
+</body>
+</html>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-<section>
-  <h2>Attività salvate (statiche)</h2>
-  <ul>
-    <li>Comprare il latte</li>
-    <li>Fare esercizio</li>
-    <li>Studiare HTML</li>
-  </ul>
-</section>
 
 <footer>
   <p>
