@@ -1,13 +1,29 @@
-/* Stile per il campo input */
+#myHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
 #taskInput {
     width: 70%;
     height: 40px;
     font-size: 18px;
     padding: 8px;
-  }
-  /* Stile per separare elementi */
-  #taskInput, #addTaskButton {
-    display: block;
-    margin: 10px auto;
-  }
-  
+    margin-bottom: 10px; /* Spazio sotto l'input */
+}
+
+#addTaskButton {
+    width: 150px;
+    padding: 10px;
+    background-color: #ff6666;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#addTaskButton:hover {
+    background-color: #ff3333;
+}
