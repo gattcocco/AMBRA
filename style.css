@@ -53,3 +53,12 @@
 #body {
     background-color: rgb(219, 246, 250);
 }   
+#addTaskButton i,
+#deleteTaskButton i {
+  margin-right: 8px;
+  transition: transform 0.3s ease; /* transizione fluida per movimenti */
+}
+#addTaskButton:hover i,
+#deleteTaskButton:hover i {
+  transform: rotate(15deg);
+}
