@@ -43,3 +43,10 @@
 #deleteTaskButton:hover {
     background-color: #555555;
 }
+#myFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: aquamarine;
+}
