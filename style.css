@@ -56,7 +56,7 @@
 #addTaskButton i,
 #deleteTaskButton i {
   margin-right: 8px;
-  transition: transform 0.3s ease; /* transizione fluida per movimenti */
+  transition: transform 0.3s ease; /* serve per rendere fluida la transizione */
 }
 #addTaskButton:hover i,
 #deleteTaskButton:hover i {
