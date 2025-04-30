@@ -37,7 +37,7 @@
 }
 
 #deleteTaskButton {
-    background-color: #888888; /* grigio per differenziarlo */
+    background-color: #888888; 
 }
 
 #deleteTaskButton:hover {
