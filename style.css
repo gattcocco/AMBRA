@@ -5,7 +5,7 @@
     margin-top: 20px;
 }
 
-#taskInput {
+#todoInput {
     width: 70%;
     height: 40px;
     font-size: 18px;
@@ -20,7 +20,7 @@
     margin-top: 10px;
 }
 
-#addTaskButton, #deleteTaskButton {
+#addTodoBtn, #deleteTodoBtn {
     width: 45%;
     padding: 10px;
     background-color: #ff6666;
@@ -32,15 +32,15 @@
     transition: background-color 0.3s ease;
 }
 
-#addTaskButton:hover {
+#addTodoBtn:hover {
     background-color: #ff3333;
 }
 
-#deleteTaskButton {
+#deleteTodoBtn {
     background-color: #888888; 
 }
 
-#deleteTaskButton:hover {
+#deleteTodoBtn:hover {
     background-color: #555555;
 }
 #myFooter {
@@ -53,12 +53,12 @@
 #body {
     background-color: rgb(219, 246, 250);
 }   
-#addTaskButton i,
-#deleteTaskButton i {
+#addTodoBtn i,
+#deleteTodoBtn i {
   margin-right: 8px;
   transition: transform 0.3s ease; /* serve per rendere fluida la transizione */
 }
-#addTaskButton:hover i,
-#deleteTaskButton:hover i {
+#addTodoBtn:hover i,
+#deleteTodoBtn:hover i {
   transform: rotate(15deg);
 }
