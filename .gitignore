@@ -1,0 +1,14 @@
+# macOS system file
+.DS_Store
+
+# Windows system files
+Thumbs.db
+desktop.ini
+
+# Linux/Unix editor backups
+*~
+
+# Common editor/IDE backup and swap files
+*.bak
+*.swp
+*.swo
