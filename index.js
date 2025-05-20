@@ -1,16 +1,23 @@
-// Per farti capire come muoverti sul dom
-
-// Ricava l'elemento con id xxx
+// Ricava gli elementi dal DOM
 let addBtn = document.getElementById('addTodoBtn');
+let todoInput = document.getElementById('todoInput');
+let taskList = document.getElementById('taskList');
 
-// Aggiungi un listener: quando verrà triggerato l'event "click", chiama la funzione e printa col console.log
+// Quando clicchi il bottone
 addBtn.addEventListener('click', () => {
     console.log("clicked add todo button", addBtn);
+
+    // Prendi il testo dell’input
+    let testo = todoInput.value;
+    console.log("Ue pirletta hai scritto:", testo);
+
+    // Crea un nuovo elemento <li>
+    let nuovoTask = document.createElement('li');
+    nuovoTask.textContent = testo;
+
+    // Aggiunge il <li> alla lista
+    taskList.appendChild(nuovoTask);
+
+    // Pulisce l'input
+    todoInput.value = "";
 });
-
-// Ricava il testo di quello che hai scritto nel campo todoInput
-
-// Quando premi il tasto, fai prima una prova printandone il contenuto nella console.
-// La console si apre su browser: tasto destro, developer tools, console.
-
-// Dopo la prova, prova ad aggiungere il testo sotto dove avevi pensato.
