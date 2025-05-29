@@ -1,4 +1,3 @@
-// Ricava gli elementi dal DOM
 let addBtn = document.getElementById('addTodoBtn');
 let todoInput = document.getElementById('todoInput');
 let taskList = document.getElementById('taskList');
@@ -20,4 +19,11 @@ addBtn.addEventListener('click', () => {
 
     // Pulisce l'input
     todoInput.value = "";
+});
+
+// --- Funzione bottone "Cancella" ---
+let deleteBtn = document.getElementById('deleteTodoBtn');
+
+deleteBtn.addEventListener('click', () => {
+    taskList.innerHTML = ""; // Svuota la lista
 });
