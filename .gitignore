@@ -12,3 +12,5 @@ desktop.ini
 *.bak
 *.swp
 *.swo
+# Ignora il file di configurazione locale di Visual Studio Code (workspace)
+Ambratolm.code-workspace
