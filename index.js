@@ -17,6 +17,13 @@ addBtn.addEventListener('click', () => {
     // Aggiunge il <li> alla lista
     taskList.appendChild(nuovoTask);
 
+    //Sbarra le task in lista
+
+    nuovoTask.addEventListener('click', () => {
+    nuovoTask.classList.toggle('completed');
+});
+
+
     // Pulisce l'input
     todoInput.value = "";
 });
