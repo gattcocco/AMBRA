@@ -1,9 +1,9 @@
 // index.js
 
-const addBtn = document.getElementById('addTodoBtn');
-const todoInput = document.getElementById('todoInput');
-const taskList = document.getElementById('taskList');
-const deleteBtn = document.getElementById('deleteTodoBtn');
+const addBtn    = document.querySelector('#addTodoBtn');
+const todoInput = document.querySelector('#todoInput');
+const taskList  = document.querySelector('#todoList');
+const deleteBtn = document.querySelector('#deleteTodoBtn');
 
 addBtn.addEventListener('click', () => {
   const text = todoInput.value.trim();
