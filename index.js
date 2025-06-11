@@ -1,23 +1,22 @@
-// Ricava gli elementi dal DOM
-let addBtn = document.getElementById('addTodoBtn');
-let todoInput = document.getElementById('todoInput');
-let taskList = document.getElementById('taskList');
+// index.js
 
-// Quando clicchi il bottone
+const addBtn    = document.querySelector('#addTodoBtn');
+const todoInput = document.querySelector('#todoInput');
+const taskList  = document.querySelector('#todoList');
+const deleteBtn = document.querySelector('#deleteTodoBtn');
+
 addBtn.addEventListener('click', () => {
-    console.log("clicked add todo button", addBtn);
+  const text = todoInput.value.trim();
+  if (!text) return;
 
-    // Prendi il testo dell’input
-    let testo = todoInput.value;
-    console.log("Ue pirletta hai scritto:", testo);
+  const item = document.createElement('li');
+  item.textContent = text;
+  item.addEventListener('click', () => item.classList.toggle('completed'));
 
-    // Crea un nuovo elemento <li>
-    let nuovoTask = document.createElement('li');
-    nuovoTask.textContent = testo;
+  taskList.appendChild(item);
+  todoInput.value = '';
+});
 
-    // Aggiunge il <li> alla lista
-    taskList.appendChild(nuovoTask);
-
-    // Pulisce l'input
-    todoInput.value = "";
+deleteBtn.addEventListener('click', () => {
+  taskList.innerHTML = '';
 });
