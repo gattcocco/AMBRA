@@ -1,51 +1,22 @@
+<!-- index.html -->
 <!DOCTYPE html>
- <!-- Meta informazioni e impostazioni di visualizzazione-->
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List Esercizio di Coding</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-   <!-- Collegamento al foglio di stile e logica -->
-   <link rel="stylesheet" href="style.css">
-   <script src="./index.js" defer></script>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
 </head>
-
 <body>
- <!-- Intestazione della pagina --> 
-
-  <header id="myHeader">
+  <div class="container">
     <h1>Cosa (non) faccio oggi?</h1>
-    <input type="text" id="todoInput" placeholder="Scrivi un'attività che non realizzerai...">
-
+    <input type="text" id="todoInput" placeholder="Scrivi un'attività">
     <div id="buttonsContainer">
-      <button id="addTodoBtn">
-        <i class="fa-solid fa-plus"></i> <!-- Icona Font Awesome per il pulsante "Aggiungi" --> 
-        Aggiungi</button>
-      <button id="deleteTodoBtn">
-        <i class="fa-solid fa-trash"></i> <!-- Icona Font Awesome per il pulsante "Cancella" -->
-        Svuota tutto</button>
+      <button id="addTodoBtn">Aggiungi</button>
+      <button id="deleteTodoBtn">Svuota tutto</button>
     </div>
-  </header>
-
-  <!-- Lista delle attività -->
-  <main>
-    <ul id="taskList">
-      <!-- Qui compariranno i task -->
-    </ul>
-  </main>
-
-<footer id="myFooter">  
-  <p>
-    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" style="color: black; text-decoration: none;">
-      <img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="Licenza Creative Commons Attribution 4.0" style="vertical-align: middle;">
-      Questo contenuto è distribuito con licenza CC BY 4.0
-    </a>
-  </p>
-</footer>
-
+    <ul id="taskList"></ul>
+  </div>
 </body>
 </html>
-

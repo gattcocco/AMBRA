@@ -1,36 +1,22 @@
-let addBtn = document.getElementById('addTodoBtn');
-let todoInput = document.getElementById('todoInput');
-let taskList = document.getElementById('taskList');
+// index.js
 
-// Quando clicchi il bottone
+const addBtn = document.getElementById('addTodoBtn');
+const todoInput = document.getElementById('todoInput');
+const taskList = document.getElementById('taskList');
+const deleteBtn = document.getElementById('deleteTodoBtn');
+
 addBtn.addEventListener('click', () => {
-    console.log("clicked add todo button", addBtn);
+  const text = todoInput.value.trim();
+  if (!text) return;
 
-    // Prendi il testo dell’input
-    let testo = todoInput.value;
-    console.log("Ue pirletta hai scritto:", testo);
+  const item = document.createElement('li');
+  item.textContent = text;
+  item.addEventListener('click', () => item.classList.toggle('completed'));
 
-    // Crea un nuovo elemento <li>
-    let nuovoTask = document.createElement('li');
-    nuovoTask.textContent = testo;
-
-    // Aggiunge il <li> alla lista
-    taskList.appendChild(nuovoTask);
-
-    //Sbarra le task in lista
-
-    nuovoTask.addEventListener('click', () => {
-    nuovoTask.classList.toggle('completed');
+  taskList.appendChild(item);
+  todoInput.value = '';
 });
-
-
-    // Pulisce l'input
-    todoInput.value = "";
-});
-
-// --- Funzione bottone "Cancella" ---
-let deleteBtn = document.getElementById('deleteTodoBtn');
 
 deleteBtn.addEventListener('click', () => {
-    taskList.innerHTML = ""; // Svuota la lista
+  taskList.innerHTML = '';
 });
