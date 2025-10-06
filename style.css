@@ -82,3 +82,46 @@ li.completed {
   text-decoration: line-through;
   color: #6c757d;
 }
+
+/* layout della riga todo */
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+}
+
+.todo-row {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex: 1;
+}
+
+.todo-check {
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+}
+
+.todo-text {
+  flex: 1;
+}
+
+/* bottone elimina singolo */
+.todo-remove {
+  border: none;
+  background: #f1f3f5;
+  padding: .4rem .6rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.todo-remove:hover {
+  background: #e9ecef;
+}
+
+/* stato completato */
+li.completed .todo-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
