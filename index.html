@@ -1,22 +1,36 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="index.js" defer></script>
-</head>
-<body>
-  <div class="container">
-    <h1>Cosa (non) faccio oggi?</h1>
-    <input type="text" id="todoInput" placeholder="Scrivi un'attività">
-    <div id="buttonsContainer">
-      <button id="addTodoBtn">Aggiungi</button>
-      <button id="deleteTodoBtn">Svuota tutto</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <!-- For now we comment this out -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- Use tailwind cdn so we do not install any library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="flex justify-center pt-8">
+      <div class="w-full max-w-lg px-4">
+        <div class="font-semibold text-2xl text-center mb-6">
+          Cosa (non) faccio oggi?
+        </div>
+        <input
+          type="text"
+          id="todo-text-input"
+          placeholder="Scrivi un'attività"
+          class="w-full p-3 border border-gray-300 rounded-lg mb-4 blue-500"
+        />
+        <button
+          id="add-todo-button"
+          class="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 mb-6"
+        >
+          Add todo
+        </button>
+        <div id="todo-list"></div>
+      </div>
     </div>
-    <ul id="todoList"></ul>
-  </div>
-</body>
+  </body>
 </html>
