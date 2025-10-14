@@ -2,33 +2,53 @@
 <!DOCTYPE html>
 <html lang="it">
   <head>
+    <!-- Imposta la codifica dei caratteri su UTF-8 (così supporta accenti, lettere speciali, ecc.) -->
     <meta charset="UTF-8" />
+
+    <!-- Rende la pagina responsive, adattandola a schermi di varie dimensioni -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Titolo che appare nella scheda del browser -->
     <title>To-Do List</title>
-    <!-- For now we comment this out -->
+
+    <!-- Il vecchio file CSS viene commentato: non serve più grazie a Tailwind -->
     <!-- <link rel="stylesheet" href="style.css" /> -->
-    <!-- Use tailwind cdn so we do not install any library -->
+
+    <!-- CDN di TailwindCSS: permette di usare le classi di stile senza installare librerie -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Collega il file JavaScript principale, con defer per caricarlo dopo l’HTML -->
     <script src="index.js" defer></script>
   </head>
+
   <body>
+    <!-- Contenitore principale centrato orizzontalmente con un po’ di spazio in alto -->
     <div class="flex justify-center pt-8">
+      <!-- Imposta una larghezza massima e padding laterale -->
       <div class="w-full max-w-lg px-4">
+        
+        <!-- Titolo grande e centrato -->
         <div class="font-semibold text-2xl text-center mb-6">
           Cosa (non) faccio oggi?
         </div>
+
+        <!-- Campo di input per scrivere un nuovo to-do -->
         <input
           type="text"
           id="todo-text-input"
           placeholder="Scrivi un'attività"
           class="w-full p-3 border border-gray-300 rounded-lg mb-4 blue-500"
         />
+
+        <!-- Bottone per aggiungere un nuovo to-do -->
         <button
           id="add-todo-button"
           class="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 mb-6"
         >
           Add todo
         </button>
+
+        <!-- Contenitore dove verrà visualizzata la lista dei to-do -->
         <div id="todo-list"></div>
       </div>
     </div>
