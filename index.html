@@ -1,25 +1,17 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-<<<<<<< Updated upstream
-    <!-- For now we comment this out -->
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <!-- Use tailwind cdn so we do not install any library -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-=======
 
     <!-- Il vecchio file CSS è eliminato: non serve più grazie a Tailwind -->
     <!-- <link rel="stylesheet" href="style.css" /> -->
 
-    <!-- CDN Content Delivery Network, di TailwindCSS: permette di usare le classi di stile senza installare librerie -->
+    <!-- CDN di TailwindCSS: permette di usare le classi di stile senza installare librerie -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Collega il file JavaScript principale, con defer per caricarlo dopo l’HTML - defer dice al browser di eseguire lo script solo dopo che la pagina HTML è caricata -->
->>>>>>> Stashed changes
+    <!-- Collega il file JavaScript principale con defer, così viene caricato dopo l’HTML -->
     <script src="index.js" defer></script>
   </head>
   <body>
@@ -28,20 +20,26 @@
         <div class="font-semibold text-2xl text-center mb-6">
           Cosa (non) faccio oggi?
         </div>
-        <input
-          type="text"
-          id="todo-text-input"
-          placeholder="Scrivi un'attività"
+
+        <!-- Todo text item modificabile inline -->
+        <div
+          id="todo-text-item"
+          contenteditable="true"
           class="w-full p-3 border border-gray-300 rounded-lg mb-4 blue-500"
-        />
+        >
+          Scrivi un'attività
+        </div>
+
         <button
           id="add-todo-button"
           class="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 mb-6"
         >
           Add todo
         </button>
+
         <div id="todo-list"></div>
       </div>
     </div>
   </body>
 </html>
+

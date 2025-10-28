@@ -1,5 +1,5 @@
 const addTodoButton = document.querySelector("#add-todo-button");
-const todoTextInput = document.querySelector("#todo-text-input");
+const todoTextInput = document.querySelector("#todo-text-item"); // aggiornato per il div contenteditable
 const todoList = document.querySelector("#todo-list");
 
 addTodoButton.addEventListener("click", () => {
@@ -7,27 +7,27 @@ addTodoButton.addEventListener("click", () => {
 });
 
 function addTodoItem() {
-  // Get text from todo input field
-  const text = todoTextInput.value.trim();
+  // Prendi il testo dal div contenteditable
+  const text = todoTextInput.innerText.trim();
   if (!text) return;
 
-  // Clean todo input field
-  todoTextInput.value = "";
+  // Pulisci il div dopo aver preso il testo
+  todoTextInput.innerText = "";
 
-  // Create parent item (div) containing text and delete button
+  // Crea il div principale del todo
   const todoItem = document.createElement("div");
   todoList.appendChild(todoItem);
 
-  // Create todo text item and append to list
+  // Crea il div che contiene il testo del todo
   const todoTextItem = document.createElement("div");
   todoTextItem.textContent = text;
   todoItem.appendChild(todoTextItem);
 
-  // Create remove todo button and append to parent
+  // Crea il bottone per rimuovere il todo
   const removeTodoButton = createRemoveTodoButton(todoItem);
   todoItem.appendChild(removeTodoButton);
 
-  // Add styling (using tailwind cdn)
+  // Aggiungi styling al todo item principale
   todoItem.classList.add(
     "flex",
     "justify-between",
@@ -39,21 +39,18 @@ function addTodoItem() {
     "mb-2"
   );
 
-  // Style todo text (left side)
+  // Aggiungi styling al testo del todo
   todoTextItem.classList.add("text-left", "flex-1");
 }
 
 function createRemoveTodoButton(parent) {
-  // Create (button) for single todo item in the list
   const removeTodoButton = document.createElement("div");
   removeTodoButton.textContent = "X";
+
   removeTodoButton.addEventListener("click", () => {
-    console.log("parent", parent);
-    // Guarda qui - lui non puo sapere se si tratta di un nodo html prima di eseguire il programma
     parent.remove();
   });
 
-  // Style remove button (right side)
   removeTodoButton.classList.add(
     "text-red-500",
     "hover:text-red-700",
